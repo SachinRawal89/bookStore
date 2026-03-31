@@ -5,7 +5,8 @@ const bookSchema = mongoose.Schema( {
     price: Number,
     category: String,
     image: String,
-    title: String
+    title: String,
+    pdfURL: String
 })
 
 // Schema ka model create kar rahe hain
@@ -13,3 +14,5 @@ const bookSchema = mongoose.Schema( {
 const Book = mongoose.model("Book", bookSchema);
 
 export default Book;
+
+//bookFile: String

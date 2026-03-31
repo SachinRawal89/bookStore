@@ -8,11 +8,12 @@ function Navbar() {
   //console.log(authUser);
 
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") || "light"                                     //? localStorage.getItem("theme") : "light"
   );
+  
   const elemnet = document.documentElement;
   useEffect(() => {
-    if (theme === "dark") {
+    /*if (theme === "dark") {
       elemnet.classList.add("dark");
       localStorage.setItem("theme", "dark");
       document.body.classList.add("dark");
@@ -20,7 +21,9 @@ function Navbar() {
       elemnet.classList.remove("dark");
       localStorage.setItem("theme", "light");
       document.body.classList.remove("dark");
-    }
+    }*/
+   document.documentElement.setAttribute("data-theme", theme);
+   localStorage.setItem("theme", theme);
   }, [theme]);
 
   const [sticky, setSticky] = useState(false);

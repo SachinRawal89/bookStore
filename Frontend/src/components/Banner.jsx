@@ -39,8 +39,8 @@ function Banner() {
           </div>
           <button className=" mt-6 btn btn-secondary">Get Started</button>
         </div>
-        <div className="order-1 w-full md:w-1/2">
-          <img src={banner} className="w-111 h-111" alt="" />
+        <div className="order-1 flex justify-end w-full md:w-1/2">
+          <img src={banner} className="w-101 h-101 pt-25" alt="" />
         </div>
       </div>
     </>

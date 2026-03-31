@@ -16,6 +16,9 @@ function FreeBook() {
         console.log(res.data);
         setBook(
           res.data.filter((data) => {
+            if (data.category === "Free") {
+              console.log(data.id);              
+            }
             return data.category === "Free";
           })
         );
